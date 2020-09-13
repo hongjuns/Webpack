@@ -4,7 +4,7 @@
     * 3. 공식을 통해 결과 얻기
 */ 
 
-const mathUtil = require('./mathUtil');
+import mathUtil from './mathUtil';
 
 const result = mathUtil.getCircleArea(2);
 console.log(result);
