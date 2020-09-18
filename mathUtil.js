@@ -1,8 +1,9 @@
 const PI= 3.14;
 const getCircleArea = r => r * r * PI;
+const getSquareArea = d => d * d;
 
-
-export default {
+module.exports = {
     PI,
-    getCircleArea
+    getCircleArea,
+    getSquareArea
 }
