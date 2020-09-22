@@ -2,11 +2,14 @@
   "name": "webpack_hongjun",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webindex.js",
   "dependencies": {
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
+    "css-loader": "^4.3.0",
+    "style-loader": "^1.2.1",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
   },
@@ -20,9 +23,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hongjuns/Webpack/issues"
-  },
-  "homepage": "https://github.com/hongjuns/Webpack#readme"
+  "license": "ISC"
 }
