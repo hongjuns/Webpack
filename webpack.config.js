@@ -1,4 +1,6 @@
 const path = require('path');
+var htmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry :'./src/webindex.js',
@@ -27,5 +29,10 @@ module.exports = {
           },
         ],
       },
+    plugins :[
+      new HtmlWebpackPlugin({
+        template :'./template.html'
+      })
+    ],
     mode:'none'
 }
