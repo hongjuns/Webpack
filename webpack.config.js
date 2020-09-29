@@ -1,12 +1,12 @@
 const path = require('path');
-var htmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry :'./src/webindex.js',
     output : {
         path : path.resolve(__dirname,'dist'),
-        filename:'bundle.js'
+        filename:'bundle.[hash].js'
     },
     module: {
         rules: [
@@ -32,6 +32,8 @@ module.exports = {
     plugins :[
       new HtmlWebpackPlugin({
         template :'./template.html'
+      }),new CleanWebpackPlugin({
+
       })
     ],
     mode:'none'

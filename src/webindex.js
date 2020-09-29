@@ -5,7 +5,7 @@ function component() {
     const element = document.createElement('div');
   
     // Lodash, currently included via a script, is required for this line to work
-    element.innerHTML = 'hello Webpack';
+    element.innerHTML = 'hello Webpack2';
     console.log(style.hellowepack);
     console.log(style);
     
