@@ -1,6 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     entry :'./src/webindex.js',
@@ -13,12 +14,9 @@ module.exports = {
           {
             test: /\.css$/i,
             use: [
-              {
-                loader :'style-loader',
-                options : {
-                  injectType: 'singletonStyleTag'
-                }
-              },
+               {
+                 loader : MiniCssExtractPlugin.loader
+               },
               {
                 loader : 'css-loader',
                  options : {
@@ -30,6 +28,9 @@ module.exports = {
         ],
       },
     plugins :[
+      new MiniCssExtractPlugin({
+        filename:'[hash].css'
+      }),
       new HtmlWebpackPlugin({
         template :'./template.html'
       }),new CleanWebpackPlugin({
