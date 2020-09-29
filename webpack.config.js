@@ -32,7 +32,9 @@ module.exports = {
         filename:'[hash].css'
       }),
       new HtmlWebpackPlugin({
-        template :'./template.html'
+        template :'./template.html',
+        collapseWhitespace:  true,
+        useShortDoctype: true
       }),new CleanWebpackPlugin({
 
       })
