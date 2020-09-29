@@ -7,7 +7,7 @@ module.exports = {
     entry :'./src/webindex.js',
     output : {
         path : path.resolve(__dirname,'dist'),
-        filename:'bundle.[hash].js'
+        filename:'[name].[chunkhash].js'
     },
     module: {
         rules: [
@@ -37,5 +37,20 @@ module.exports = {
 
       })
     ],
+    optimization: {
+      runtimeChunk: {
+        name: 'runtime',
+      },
+      splitChunks: {
+        cacheGroups: {
+          commons: {
+            // node_modules에 포함된 내용들을 vendor-chunk로 구분짓는다.
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          }
+        }
+      }
+    },
     mode:'none'
 }
