@@ -17,11 +17,13 @@
     "style-loader": "^1.2.1",
     "terser-webpack-plugin": "^4.2.2",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "dev": "NODE_ENV=DEVELOPMENT webpack --config webpack.dev.js",
+    "build": "NODE_ENV=PRODUCTION webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",

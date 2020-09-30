@@ -35,8 +35,8 @@ module.exports = {
       }),
       new HtmlWebpackPlugin({
         template :'./template.html',
-        collapseWhitespace:  false,
-        useShortDoctype: false
+        collapseWhitespace:  true,
+        useShortDoctype: true
       }),new CleanWebpackPlugin({}),
       new OptimizeCssAssetsPlugin({
         assetNameRegExp: /\.css$/g,
@@ -70,5 +70,5 @@ module.exports = {
         }),
       ],
     },
-    mode:'dev'
+    mode:'none'
 }
