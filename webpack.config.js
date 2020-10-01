@@ -62,11 +62,9 @@ module.exports = {
         }
       },
       minimize: true,
-      zomm:'234',
       minimizer: [
         new TerserPlugin({
           cache: true,
-          test :'123'
         }),
       ],
     },

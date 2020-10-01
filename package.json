@@ -18,9 +18,11 @@
     "terser-webpack-plugin": "^4.2.2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.1.4"
   },
   "scripts": {
+    "start": "NODE_ENV=DEVELOPMENT webpack-dev-server --config webpack.dev.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=DEVELOPMENT webpack --config webpack.dev.js",
     "build": "NODE_ENV=PRODUCTION webpack --config webpack.prod.js"

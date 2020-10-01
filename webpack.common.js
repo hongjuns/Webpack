@@ -12,6 +12,11 @@ module.exports = {
         path : path.resolve(__dirname,'dist'),
         filename:'[name].[chunkhash].js'
     },
+    devServer: {
+      hot: true,
+      host: "localhost",
+      port: 5500
+    },
     module: {
         rules: [
           {
@@ -45,7 +50,7 @@ module.exports = {
         },
       }),new CleanWebpackPlugin(),
       new webpack.DefinePlugin({
-        IS_PRODUCTION : true
+        IS_PRODUCTION : isProduction
       })
     ],
 }
