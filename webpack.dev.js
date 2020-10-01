@@ -7,7 +7,12 @@ const config = {
         open : true,
         overlay : true,
         port : 5000,
-        historyApiFallback :true
+        historyApiFallback :{
+            rewrites: [
+                { from: /^\/subpage$/, to: '/subpage.html' },
+                { from: /./, to: '404.html' }
+              ]
+        }
     }
 }
 
