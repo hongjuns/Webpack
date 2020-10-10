@@ -9,8 +9,8 @@ const config = {
         port : 5000,
         historyApiFallback :{
             rewrites: [
-                { from: /^\/subpage$/, to: '/subpage.html' },
-                { from: /./, to: '404.html' }
+                { from: /^\/subpage$/, to: 'template/subpage.html' },
+                { from: /./, to: 'template/404.html' }
               ]
         }
     }
